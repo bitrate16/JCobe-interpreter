@@ -1,0 +1,31 @@
+// Page listener
+listener = {
+	onload: null,
+	onready: null
+};
+// Functions
+listener.onload = function() {
+	return true;
+};
+
+var changeling1 = {
+	transform: function(changeling) {
+		changeling1.rootModel = changeling.rootModel;
+	},
+	rootModel: null
+};
+
+var changeling2 = {
+	transform: function(changeling) {
+		changeling2.rootModel = changeling.rootModel;
+	},
+	rootModel: null
+};
+
+changeling1.transform(changeling);
+
+var obj = Java.newArray("java.lang.Exception", 10).object;
+
+var System = Java.newStatic("java.lang.System");
+System.out.println("Да, thread, да!");
+System.err.println("Я это сделал");

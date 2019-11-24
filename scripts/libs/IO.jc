@@ -1,0 +1,39 @@
+// Simple shared library for working with files
+var IO = {
+  FileUtils: Java.newStatic("bitrate16.JCobe.Utils.FileUtils"),
+  // Get's file from given path
+  getFile: function (path) {
+    return newInstance("java.lang.file", path);
+  },
+
+  // Reads File from given path
+  readFile: function (path) {
+    return FileUtils.read(path);
+  },
+
+  // Writes String into file
+  writeFile: function (string, path) {
+    return FileUtils.writeFile(path, string);
+  },
+
+  // Checks if file exists
+  exist: function (path) {
+    return FileUtils.exist(path);
+  },
+
+  // Create new File in path
+  mkfile: function (path) {
+    FileUtils.mkfile(path);
+  },
+
+  // Create File Directory on path
+  mkdir: function (path) {
+    FileUtils.mkdir(path);
+  },
+
+  // Delete file by path
+  delete: function (path) {
+    FileUtils.delete(path);
+  }
+};
+// System.err.println(IO.keys);

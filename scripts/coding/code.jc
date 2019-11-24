@@ -1,0 +1,156 @@
+Java.loadScript("scripts/coding/stdutils.jc");
+
+System.out.println("Test output");
+
+
+// Oper import
+// Java.loadScript("scripts/coding/brainfuck.jc");
+// Java.loadScript("scripts/libs/IO.jc");
+
+// brainfuck.state.reset();
+// // System.err.println(IO);
+// var code = IO.readFile("scripts/coding/brainfuck/helloworld-2.bf");
+// // System.out.println(code);
+//
+// brainfuck.execute(code);
+
+// var numbers = [];
+// var L = 0, R = 0;
+// System.out.print("L: "); L = scanner.nextInt();
+// System.out.print("R: "); R = scanner.nextInt();
+// 123456789
+// ---------
+// 456790567
+// |||||||||
+
+// var a = {
+//   dint: 10,
+//   pint: 20,
+//   tint: {
+//     fn: function() {
+//       dint = 4;
+//     }
+//   },
+//   f: function() {
+//     // dint = 3;
+//     pint = 14;
+//     return function() {
+//       // dint = 232323232323;
+//       a.dint = 88888888;
+//       // pint = 8888118;
+//       // return 1212121212;
+//     };
+//   }
+// };
+//
+// struct b {
+//   dip: 10,
+//   f: function() {
+//     dip = 23;
+//   }
+// }
+//
+// // function solve() {
+// //   for(var n = L; n < R; n++) {
+// //     var number = "";
+// //     for(var i = 0; i < n; i++)
+// //       number += "a";
+// //       System.out.println(number);
+// //     numbers.add(number);
+// //   }
+// // }
+// // solve();
+// a.f()();
+// // System.out.println(numbers);
+//
+// var d = b();
+// d.f();
+// System.out.println(d.dip);
+//
+// System.out.println(a.dint);
+// System.out.println(a.pint);
+
+
+
+// var byte = 158b;
+//
+// // Task 0.
+// function min(intArray) {
+//   var min = Integer.MAX_VALUE;
+//   var minIndex = -1;
+//   for(var i = 0; i < intArray.length; i++)
+//     if(intArray[i] < min) {
+//       minIndex = i;
+//       min = intArray[i];
+//     }
+//   return [minIndex, min];
+// }
+//
+// System.out.println(min([23, 26]));
+// System.out.println(2 + 2 * 2);
+// System.out.println(min([4, 212112211221]));
+// System.out.println(min);
+//
+// var pit = 10;
+//
+// var a = {
+//   dit: 12121212,
+//   pit: 12121212,
+//   f : function() {
+//     return function(dit) {
+//       this.dit = dit;
+//       pit = 32;
+//       return this.dit;
+//     };
+//   }
+// };
+//
+// System.out.println(a.f()(342));
+// System.out.println(a.pit);
+// System.out.println(pit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Comment

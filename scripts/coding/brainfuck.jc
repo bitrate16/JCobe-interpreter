@@ -1,0 +1,79 @@
+// Simple library for interpreting Brainfuck code
+// Uses stdlib
+var brainfuck = {
+  // Executor state
+  state: {
+    // Current mamory point
+    pointer: 0,
+    // Current string point
+    position: 0,
+    // Code of execution
+    code: "",
+    // Memory units
+    memory: [],
+    // Reset
+    reset: function() {
+      // System.out.println("JAVA- - - - - - - - - - - - - - -- - - - - - -- -- - --  -->   " + Java);
+      // Reset all values
+      memory.clear();
+      memory.fill(30000, char(0));
+      pointer = 0;
+      position = 0;
+      code = "";
+    }
+  },
+  // Main function
+  execute: function(code) {
+    if(code == null || code.isEmpty())
+      return 1;
+
+    state.reset();
+    var brc = 0;
+    state.code = code;
+
+    // Join loop
+    while(state.position < code.length()) {
+      var c = code.charAt(state.position);
+
+      // XXX: Fix loops
+      switch(c) {
+        case '>':
+          state.pointer++;
+        case '<':
+          state.pointer--;
+        case '+':
+          state.memory[state.pointer]++;
+        case '-':
+          state.memory[state.pointer]--;
+        case '.':
+          System.out.print(state.memory[state.pointer]);
+        case ',':
+          state.memory[state.pointer] = scanner.nextChar();
+        case '[':
+          if(!state.memory[state.pointer]) {
+            brc++;
+            while(brc) {
+              state.position++;
+              c = code.charAt(state.position);
+              if(c == '[') brc++;
+              if(c == ']') brc--;
+            }
+          } else if(c == ']') {
+            if(!state.memory[state.pointer])
+              continue;
+            else {
+              if(c == ']') brc++;
+              while(brc) {
+                state.position--;
+                c = code.charAt(state.position);
+                if(c == '[') brc--;
+                if(c == ']') brc++;
+              }
+              state.position--;
+            }
+          }
+        }
+        state.position++;
+      }
+    }
+};

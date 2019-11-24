@@ -1,0 +1,31 @@
+// Standart math library.
+var Math = Java.newStatic("java.lang.Math");
+
+// Standart vector class
+struct Vec {
+  set:    function(v)       {},// Set from Other Vector
+  add:    function(v)       {},// Add other Vector
+  sub:    function(v)       {},// Substract by other Vector
+  mul:    function(v)       {},// Multiply by other Vector
+  scl:    function(sx, sy)  {},// Scale cords
+  inv:    function()       {},// Invert cords
+  norm:   function()        {},// Normalize cords
+  cpy:    function()        {}, // Returns full copy of the current Vector
+  len:    function()        {} // Returns length of the Vector
+}
+
+struct Vec2 : Vec {
+  x:      0.0,
+  y:      0.0,
+  set:    function(v)       { x = v.x;  y = v.y;  return this; }, // TODO: Add support for 'return this'
+  add:    function(v)       { x += v.x; y += v.y; return this; },
+  sub:    function(v)       { x -= v.x; y -= v.y; return this; },
+  mul:    function(v)       { x *= v.x; y *= v.y; return this; },
+  scl:    function(sx, sy)  { x *= sx;  y *= sy;  return this; },
+  inv:    function()        { x = -x;   y = -y;                },
+  norm:   function()        { var l = len();
+                              x /= l;   y /= l;   return this; },
+  cpy:    function()        { var r = Vec2();
+                              r.x = x;  r.y = y;  return r;    },
+  len:    function()        { return Math.sqrt(x * x + y * y); }
+}

@@ -1,0 +1,40 @@
+// Standart Utils
+// System class. (directly from java)
+var System = Java.newStatic("java.lang.System");
+// STDIN
+var scanner = Java.newInstance("java.util.Scanner", System.in);
+// Types declaration
+var Integer = Java.newStatic("java.lang.Integer");
+var Boolean = Java.newStatic("java.lang.Boolean");
+var Character = Java.newStatic("java.lang.Character");
+var Double = Java.newStatic("java.lang.Double");
+var Long = Java.newStatic("java.lang.Long");
+
+// Cast functions
+function int(value) {
+  return value * 1;
+}
+
+function long(value) {
+  return value * 1L;
+}
+
+function double(value) {
+  return vaue * 1.0;
+}
+
+function char(value) {
+  return value + 'a' - 'a';
+}
+
+function byte(value) {
+  return value + 0x00;
+}
+
+function string(value) {
+  return value + "";
+}
+
+function boolean() {
+  return value && true;
+}

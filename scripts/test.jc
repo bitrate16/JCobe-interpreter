@@ -1,0 +1,2 @@
+var System = Java.newStatic("java.lang.System");
+var scanner = Java.newInstance("java.util.Scanner", System.in);

@@ -1,0 +1,29 @@
+var System = Java.newStatic("java.lang.System");
+var TokenType = Java.newStatic("bitrate16.JCobe.Syntax.Token$TokenType");
+
+var object = Java.newInstance("bitrate16.JCobe.Syntax.Token", "null", TokenType.OPERATOR);
+// System.out.println("----------> " + System.out);
+// System.err.println(object.object == null);
+
+var ex = Java.newInstance("java.lang.RuntimeException", "asa");
+ex = ex.getMessage();
+
+Java.loadScript("scripts/libs/IO.jc");
+
+IO.mkfile("scripts/test-1.jc");
+
+function bla(st) {
+  System.err.println(st);
+}
+
+// bla("asssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
+
+// java.util.Scanner
+var scanner = Java.newInstance("java.util.Scanner", System.in);
+
+var string = null;
+
+while (false) {
+  string = scanner.nextLine();
+  System.out.println("------> " + string);
+}
